@@ -9,3 +9,6 @@ def introduction():
     time.sleep(1)
     print("Выбирай свои действия осторожно, и помни, что каждое решение влияет на твое приключение!\n")
 
+
+if __name__ == "__main__":
+    dungeon_quest()
