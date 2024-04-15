@@ -9,3 +9,17 @@ def introduction():
     time.sleep(1)
     print("Выбирай свои действия осторожно, и помни, что каждое решение влияет на твое приключение!\n")
 
+def make_choice(question, options):
+    print(question)
+    for i, option in enumerate(options, start=1):
+        print(f"{i}. {option}")
+
+    while True:
+        try:
+            choice = int(input("Выбери номер действия: "))
+            if 1 <= choice <= len(options):
+                return choice
+            else:
+                print("Пожалуйста, введите число от 1 до", len(options))
+        except ValueError:
+            print("Пожалуйста, введите число.")
